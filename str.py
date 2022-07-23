@@ -1,17 +1,16 @@
 import streamlit as st
 import pandas as pd
 import psycopg2
-#import hidden
+import hidden
 
-#secrets = hidden.secrets()
+secrets = hidden.secrets()
 
 
-
-conn = psycopg2.connect(host=st.secrets['host'],
-        port=st.secrets['port'],
-        database=st.secrets['dbname'],
-        user=st.secrets['user'],
-        password=st.secrets['password'],
+conn = psycopg2.connect(host=secrets['host'],
+        port=secrets['port'],
+        database=secrets['database'],
+        user=secrets['user'],
+        password=secrets['pass'],
         connect_timeout=3)
 
 
