@@ -6,12 +6,13 @@ import pandas as pd
 #secrets = hidden.secrets()
 
 
-#conn = psycopg2.connect(host=secrets['host'],
-#        port=secrets['port'],
-#        database=secrets['database'],
-#        user=secrets['user'],
-#        password=secrets['pass'],
-#        connect_timeout=3)
+
+conn = psycopg2.connect(host=st.secrets['host'],
+        port=st.secrets['port'],
+        database=st.secrets['dbname'],
+        user=st.secrets['user'],
+        password=st.secrets['password'],
+        connect_timeout=3)
 
 
 @st.cache(allow_output_mutation=True)
